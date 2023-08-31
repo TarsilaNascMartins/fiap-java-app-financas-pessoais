@@ -9,7 +9,7 @@ public class Ganho {
 
     // Registra o valor somado
     public double registrarGanho(){
-        System.out.println(soma_ganho);
+
         System.out.println("Digite o ganho a ser computado:");
         double ganho= scc.nextDouble();
         cadastrarcd_ganho();

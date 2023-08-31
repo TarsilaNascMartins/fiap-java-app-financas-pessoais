@@ -26,6 +26,7 @@ public class Usuario {
 
     }
 
+    // retorna o cpf e cria o número de id
    String salvarUsuario(String cpf) {
         id_usuario++;
        System.out.println("ID usuario:"+id_usuario);

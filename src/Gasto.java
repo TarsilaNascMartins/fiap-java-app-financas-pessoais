@@ -8,7 +8,7 @@ public class Gasto {
 
     // Registra o valor somado
     public double registrarGasto(){
-        System.out.println(soma_gasto);
+
         System.out.println("Digite o gasto a ser computado:");
         double gasto = scc.nextDouble();
         cadastrarcd_gasto();
