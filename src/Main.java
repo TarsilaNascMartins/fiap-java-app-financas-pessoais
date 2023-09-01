@@ -29,26 +29,26 @@ public class Main {
 
             switch(i) {
                 case 1:
-                    double gastoValor = gasto.registrarGasto();
+                    double gastoValor = gasto.setGasto();
                     System.out.println("Seu gasto resgitrado no momento foi do valor de: R$ " + gastoValor);
                     System.out.println("Total de Gastos: " + gasto.somaGastos(gastoValor));
                     System.out.println("ID gasto número:"+gasto.cd_gasto);
-                    extrato.enviarGasto(gastoValor);
+                    extrato.getGasto(gastoValor);
 
                     break;
                 case 2:
-                    double ganhoValor = ganho.registrarGanho();
+                    double ganhoValor = ganho.setGanho();
                     System.out.println("Seu ganho resgitrado no momento foi do valor de: R$ " + ganhoValor);
                     System.out.println("Total de Ganhos: " + ganho.somaGanho(ganhoValor));
-                    System.out.println("ID gasto número:"+ganho.cd_ganho);
-                    extrato.enviarGanho(ganhoValor);
+                    System.out.println("ID gasto número:"+ganho.id_ganho);
+                    extrato.getGanho(ganhoValor);
 
                     break;
 
                 case 3:
                     System.out.println("****Saldo Total****" );
-                    System.out.println("Total de Ganhos: " +  extrato.valorganho);
-                    System.out.println("Total de Gastos: " +  extrato.valorgasto);
+                    System.out.println("Total de Ganhos: " +  extrato.valor_extratoGanho);
+                    System.out.println("Total de Gastos: " +  extrato.valor_extratoGasto);
                     System.out.println("Saldo R$:" +extrato.realizarSaldoTotal());
 
                     break;

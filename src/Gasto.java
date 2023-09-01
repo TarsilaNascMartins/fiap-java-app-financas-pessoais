@@ -7,7 +7,7 @@ public class Gasto {
     Scanner scc = new Scanner(System.in);
 
     // Registra o valor somado
-    public double registrarGasto(){
+    public double setGasto(){
 
         System.out.println("Digite o gasto a ser computado:");
         double gasto = scc.nextDouble();
@@ -30,9 +30,9 @@ public class Gasto {
 
     }
 
-// retornar o valor pelo id
-    void getGasto(int cd_gasto){
+    Gasto getGanho(int cd_gansto){
 
+        return null;
     }
 
 //incrementa o número do id a cada criação de perfil

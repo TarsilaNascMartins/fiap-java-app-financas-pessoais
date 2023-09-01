@@ -2,13 +2,13 @@ import java.util.Scanner;
 
 public class Ganho {
 
-    int cd_ganho;
+    int id_ganho;
     double soma_ganho;
 
     Scanner scc = new Scanner(System.in);
 
     // Registra o valor somado
-    public double registrarGanho(){
+    double setGanho(){
 
         System.out.println("Digite o ganho a ser computado:");
         double ganho= scc.nextDouble();
@@ -33,13 +33,14 @@ public class Ganho {
     }
 
     // retornar o valor pelo id
-    void getGanho(int cd_ganho){
+    Ganho getGanho(int cd_ganho){
 
+        return null;
     }
 
     //incrementa o número do id a cada criação de perfil
     public void cadastrarcd_ganho(){
-        cd_ganho++;
+        id_ganho++;
     }
 
 

@@ -1,25 +1,32 @@
 public class Extrato {
 
-    int cd_extrato;
+    int id_extrato;
 
-    double saldo_total, valorgasto, valorganho;
+    double saldo_total, valor_extratoGasto, valor_extratoGanho;
 
     //indentação das classes
     Usuario user = new Usuario();
     Gasto gasto = new Gasto();
+
     Ganho ganho = new Ganho();
 
-    void enviarGasto(double valorGasto){
-      valorgasto = valorGasto;
+    void getGasto(double valorGasto){
+      valor_extratoGasto = valorGasto;
     }
 
-    void enviarGanho(double valorGanho){
-        valorganho = valorGanho;
+    void getGanho(double valorGanho){
+        valor_extratoGanho = valorGanho;
 
+    }
+
+    //consultar extrato
+
+    Extrato consultarExtrato(int id_extrato){
+        return null;
     }
 
     double realizarSaldoTotal(){
-        saldo_total = valorgasto - valorganho;
+        saldo_total = valor_extratoGasto - valor_extratoGanho;
         return saldo_total;
     }
 
