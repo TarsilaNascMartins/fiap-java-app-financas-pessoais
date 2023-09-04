@@ -1,48 +1,25 @@
-import java.util.Scanner;
-
-public class Ganho {
+public class Ganho extends Movimentacao{
 
     int id_ganho;
+    String tipo;
     double soma_ganho;
 
-    Scanner scc = new Scanner(System.in);
-
-    // Registra o valor somado
-    double setGanho(){
-
-        System.out.println("Digite o ganho a ser computado:");
-        double ganho= scc.nextDouble();
-        cadastrarcd_ganho();
-
-        return ganho;
-
+    public Ganho(int id_movimentacao, String tipo) {
+        super(id_movimentacao);
+        this.tipo = tipo;
     }
 
-    //Faz o acumulo dos valores de ganho
-    double somaGanho(double ganho){
-        soma_ganho += ganho;
-        return soma_ganho;
+    //Faz o acumulo dos valores
+    @Override
+    protected double setMovimentacao(double movimentacao){
+        movimentacao += movimentacao;
+        soma_ganho = movimentacao;
+        return movimentacao;
     }
 
-
-
-
-    //excluir o código pelo id
-    void deletarGanho(int cd_ganho){
-
+    public double getSomaMovimentacao(double movimentacao) {
+       return setMovimentacao(movimentacao) ;
     }
-
-    // retornar o valor pelo id
-    Ganho getGanho(int cd_ganho){
-
-        return null;
-    }
-
-    //incrementa o número do id a cada criação de perfil
-    public void cadastrarcd_ganho(){
-        id_ganho++;
-    }
-
 
 
 }

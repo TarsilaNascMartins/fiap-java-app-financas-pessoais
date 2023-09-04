@@ -1,45 +1,23 @@
-import java.util.Scanner;
-public class Gasto {
+public class Gasto extends Movimentacao {
 
-    int cd_gasto;
+    int id_gasto;
+    String tipo;
+
     double soma_gasto;
 
-    Scanner scc = new Scanner(System.in);
-
-    // Registra o valor somado
-    public double setGasto(){
-
-        System.out.println("Digite o gasto a ser computado:");
-        double gasto = scc.nextDouble();
-        cadastrarcd_gasto();
-
-        return gasto;
-
+    public Gasto(int id_movimentacao, String tipo) {
+        super(id_movimentacao);
+        this.tipo = tipo;
     }
 
-    //Faz o acumulo dos valores de gasto
-    double somaGastos(double gasto){
-        soma_gasto += gasto;
-
-        return soma_gasto;
+    public double getSubtraiMovimentacao(double movimentacao) {
+        return setMovimentacao(movimentacao);
     }
 
-
-//excluir o código pelo id
-    void deletarGastos(int cd_gasto){
-
+    @Override
+    protected double setMovimentacao (double movimentacao){
+        movimentacao -= movimentacao;
+        soma_gasto = movimentacao;
+        return movimentacao;
     }
-
-    Gasto getGanho(int cd_gansto){
-
-        return null;
-    }
-
-//incrementa o número do id a cada criação de perfil
-    public void cadastrarcd_gasto(){
-        cd_gasto++;
-     }
-
-
-
 }

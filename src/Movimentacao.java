@@ -1,51 +1,40 @@
 import java.util.Scanner;
 
-public class Movimentacao {
+public abstract class Movimentacao {
 
+    int id_movimentacao;
 
-    int cd_movimentacao;
-    double soma_movimentacao;
+    public Movimentacao(int idMovimentacao) {
+    }
+
+    // Construtor da classe Movimentacao
+    public double Movimentacao(int id_movimentacao){
+            this.id_movimentacao = id_movimentacao;
+            return id_movimentacao;
+    }
 
     Scanner scc = new Scanner(System.in);
 
     // Registra o valor
-    public double setMovimentacao(){
-
+    double setMovimentacao(){
         System.out.println("Digite o valor a ser computado:");
         double movimentacao = scc.nextDouble();
-        cadastrarcd_movimentacao();
-
-        return movimentacao;
-
-    }
-
-    //Faz o acumulo dos valores
-    double somaMovimentacao(double movimentacao){
-        movimentacao += movimentacao;
-
-        return movimentacao;
-    }
-
-
-    //excluir o código pelo id
-    void deletarMovimentacao(int cd_movimentacao){
-
-    }
-
-    Movimentacao getMovimentacao(int cd_movimentacao){
-
-        return null;
+         return movimentacao;
     }
 
     //incrementa o número do id a cada criação de perfil
-    public void cadastrarcd_movimentacao(){
-        cd_movimentacao++;
+     void cadastrarid_movimentacao(){
+       id_movimentacao++;
     }
 
+    public double getIdMovimentacao(int id_movimentacao) {
+        return id_movimentacao;
+    }
 
+    protected abstract double setMovimentacao(double movimentacao);
 
+    //excluir o código pelo id???
+    void deletarMovimentacao(int id_movimentacao){
 
-
-
-
+    }
 }
