@@ -11,14 +11,14 @@ public class Ganho extends Movimentacao{
 
     //Faz o acumulo dos valores
     @Override
-    protected double setMovimentacao(double movimentacao){
+    protected double salvarMovimentacao(double movimentacao){
         movimentacao += movimentacao;
         soma_ganho = movimentacao;
         return movimentacao;
     }
 
     public double getSomaMovimentacao(double movimentacao) {
-       return setMovimentacao(movimentacao) ;
+       return salvarMovimentacao(movimentacao) ;
     }
 
 

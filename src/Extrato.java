@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Extrato {
 
     int id_extrato;
@@ -19,8 +21,10 @@ public class Extrato {
 
     //consultar extrato
 
-    int consultarExtrato(int id_extrato){
-        return id_extrato;
+    Extrato consultarExtrato(int id_extrato){
+        Extrato lista = New Object ArrayList = null;
+        ArrayList;
+        return Extrato;
     }
 
     double realizarSaldoTotal(){

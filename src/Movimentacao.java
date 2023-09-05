@@ -1,8 +1,14 @@
+import java.time.LocalDate;
 import java.util.Scanner;
 
 public abstract class Movimentacao {
 
-    int id_movimentacao;
+    int id_movimentacao,  qtd_parcelas;
+    String ds_movimentação;
+    double vl_movimentação;
+
+    LocalDate dt_movimentacao;
+
 
     public Movimentacao(int idMovimentacao) {
     }
@@ -16,7 +22,7 @@ public abstract class Movimentacao {
     Scanner scc = new Scanner(System.in);
 
     // Registra o valor
-    double setMovimentacao(){
+    double salvarMovimentacao(){
         System.out.println("Digite o valor a ser computado:");
         double movimentacao = scc.nextDouble();
          return movimentacao;
@@ -28,13 +34,16 @@ public abstract class Movimentacao {
     }
 
     public double getIdMovimentacao(int id_movimentacao) {
-        return id_movimentacao;
+        double Movimentacao = 0;
+        return Movimentacao;
     }
 
-    protected abstract double setMovimentacao(double movimentacao);
 
     //excluir o código pelo id???
     void deletarMovimentacao(int id_movimentacao){
 
     }
+
+    //Faz o acumulo dos valores
+    protected abstract double salvarMovimentacao(double movimentacao);
 }

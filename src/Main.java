@@ -11,12 +11,7 @@ public class Main {
 
 
            //Indentação das classes
-           Movimentacao movimentacao = new Movimentacao(1) {
-               @Override
-               protected double setMovimentacao(double movimentacao) {
-                   return 0;
-               }
-           };
+
            Gasto gasto = new Gasto(1,"gasto");
            Ganho ganho = new Ganho(1,"ganho");
            Extrato extrato = new Extrato();
@@ -38,17 +33,17 @@ public class Main {
 
             switch(i) {
                 case 1:
-                    double gastoValor = gasto.setMovimentacao();
+                    double gastoValor = gasto.salvarMovimentacao();
                     System.out.println("Seu gasto registrado no momento foi do valor de: R$ " + gastoValor);
-                    System.out.println("Total de Gastos: " + extrato.getGasto(gastoValor) );
+                  //  System.out.println("Total de Gastos: " + extrato.getGasto(gastoValor) );
                     System.out.println("ID gasto número:"+gasto.id_gasto);
                     extrato.getGasto(gastoValor);
 
                     break;
                 case 2:
-                    double ganhoValor = ganho.setMovimentacao();
+                    double ganhoValor = ganho.salvarMovimentacao();
                     System.out.println("Seu ganho registrado no momento foi do valor de: R$ " + ganhoValor);
-                    System.out.println("Total de Ganhos: " + extrato.getGanho(ganhoValor));
+                   // System.out.println("Total de Ganhos: " + extrato.getGanho(ganhoValor));
                     System.out.println("ID gasto número:"+ganho.id_ganho);
                     extrato.getGanho(ganhoValor);
 

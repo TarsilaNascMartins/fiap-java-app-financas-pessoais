@@ -11,11 +11,11 @@ public class Gasto extends Movimentacao {
     }
 
     public double getSubtraiMovimentacao(double movimentacao) {
-        return setMovimentacao(movimentacao);
+        return salvarMovimentacao(movimentacao);
     }
 
     @Override
-    protected double setMovimentacao (double movimentacao){
+    protected double salvarMovimentacao (double movimentacao){
         movimentacao -= movimentacao;
         soma_gasto = movimentacao;
         return movimentacao;
